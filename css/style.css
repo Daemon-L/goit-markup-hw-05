@@ -260,7 +260,9 @@ p {
 }
 
 .advantag-box {
-  padding: 0 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-bottom: 30px;
   background-color: #f5f4fa;
 }
@@ -579,6 +581,8 @@ fill не меняет цвет иконки
   margin-top: 30px;
 
   flex-basis: calc((100% - 96px) / 3);
+
+  cursor: pointer;
 }
 
 .shadow:hover,
