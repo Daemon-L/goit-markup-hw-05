@@ -37,6 +37,10 @@ p {
   letter-spacing: 0.02em;
   line-height: 1.14;
   font-style: normal;
+
+  transition-property: color;
+  transition-duration:250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .active-links,
@@ -79,6 +83,12 @@ p {
   font-weight: 500;
 
   cursor: pointer;
+
+  transition-property: background-color, color, box-shadow;
+  transition-duration:250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  
+
 }
 
 .title-hidden {
@@ -184,6 +194,10 @@ p {
 .icon-heder {
   margin-right: 10px;
   fill: var(--primary-font-color);
+
+  transition-property: fill;
+  transition-duration:250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .links-heder:hover .icon-heder {
@@ -391,12 +405,20 @@ p {
   width: 44px;
   height: 44px;
   border-radius: 50%;
+
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-list-icon {
   width: 20px;
   height: 20px;
   fill: #afb1b8;
+
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-list-link:hover,
@@ -442,10 +464,18 @@ fill не меняет цвет иконки
 
   border: 1px solid #afb1b8;
   border-radius: 4px;
+
+  transition-property: border-color;
+  transition-duration:250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients-icon {
   fill: #afb1b8;
+
+  transition-property: fill;
+  transition-duration:250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients-link:focus,
@@ -492,9 +522,6 @@ fill не меняет цвет иконки
 .footer-social {
   margin-left: 70px;
   padding-top: 12px;
-  /* Пожалуй такой костыль, что капец
-  падинги плюсуются и я добавил нехватающие 
-  как этот блок разместить по другому?*/
   padding-bottom: 40px;
 }
 
@@ -524,6 +551,10 @@ fill не меняет цвет иконки
 
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 100%;
+
+  transition-property: background-color;
+  transition-duration:250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-social-item:not(:last-child) {
@@ -600,12 +631,15 @@ fill не меняет цвет иконки
   margin-top: 30px;
 
   flex-basis: calc((100% - 96px) / 3);
-
   cursor: pointer;
+
+  transition-property: box-shadow;
+  transition-duration:250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.shadow:hover,
-.shadow:focus {
+.works-item:hover,
+.works-item:focus {
   box-shadow: 1px 4px 6px 0 rgba(0, 0, 0, 0.16), 0 4px 4px 0 rgba(0, 0, 0, 0.06),
     0 1px 1px 0 rgba(0, 0, 0, 0.12);
 }
@@ -635,19 +669,24 @@ fill не меняет цвет иконки
 
  min-width: 528px;
  min-height: 581px;
-
- background-color: #fff;
-
  padding: 8px;
- 
+ background-color: #fff;
 }
 
 .modal-button {
+  position: absolute;
+  right: 8px;
+  top: 8px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   width: 30px;
   height: 30px;
-  border-radius: 0px solid rgba(0, 0, 0, 0.1);
+  
+  border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
   background-color: #fff;
-
-  cursor: pointer;
 }
+
